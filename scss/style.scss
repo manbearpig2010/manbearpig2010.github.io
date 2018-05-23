@@ -1,0 +1,381 @@
+@mixin flexer($display,$direction,$justify,$align,$wrap:no-wrap){
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+@mixin query($screen){
+  @media only screen and (min-width:$screen){
+    @content;
+  }
+}
+$blue:#007BFF;
+$gray:#E6E6E6;
+$t-black:rgba(0,0,0,.1);
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  
+}
+header{
+  @include flexer(flex,column, center, center);
+  position:relative;
+  margin:0;
+  .top-bar{
+    @include flexer(flex,row,space-between,center);
+    width:100%;
+    background-color:black;
+    height:50px;
+    margin-bottom:5%;
+    @include query(900px){
+      margin-bottom:0;
+    }
+    
+  } 
+  .sm-icons{
+    @include flexer(flex,row,space-between,center);
+    margin-left:5%;
+    width:30%;
+    color:white;
+    @include query(900px){
+      width:20%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .sm-icons:nth-child(#{$i}){
+      &:hover{
+        color:$gray;
+    }
+  }
+  }
+  h1{
+    @media only screen and (min-width:900px){
+      font-size:3em;
+    }
+  }
+}
+  .menu {
+    position:relative;
+    width:80%;
+    margin-right:5%;
+    @include query(900px){
+      margin-right:0;
+    }
+    
+   
+}
+.search{
+  margin-right:5%;
+}
+.menu-image{
+  position:relative;
+  margin:0;
+  width:15%;
+  float:left;
+   @include query (900px){
+      display:none;
+    }
+}
+.main-heading{
+float:left;
+  margin:0;
+  text-align:center;
+  width:85%;
+  @include query(900px){
+    float:none;
+  }
+  h1{
+    margin:0;
+    font-size:3em;
+   
+  }
+}
+    .dropdown-container{
+      @include flexer(flex,column,space-between,stretch);
+      position:relative;
+      width:100%;
+      background-color:$gray;
+      min-height:100%;
+      z-index:10;
+      @include query(900px){
+        @include flexer(flex, row, space-between, center);
+        width:40%;
+        margin-left:30%;
+        margin-top:15px;
+        background-color:white;
+      }
+    }
+   
+    .dropdown-content{
+      @include flexer(flex, column, flex-start,flex-start);
+      cursor:pointer;
+      position:relative;
+      margin-bottom:20px;
+      margin-left:5px;
+      background-color:$gray;
+      width:100%; 
+      &:last-child{
+        margin-bottom:0;
+      }
+      @include query(900px){
+        @include flexer (flex, row, center, center);
+        background-color:white;
+        color:rgba(0,0,0, .6);
+        margin:0;
+        &:hover{
+          color:rgba(0,0,0, 1);
+        }
+       
+      }
+    }
+    .dd-dd-container{
+      @include flexer(flex, column, flex-start, flex-start);
+      position:relative;
+      border:1px solid $t-black;
+      width:80%;
+      margin-left:10px;
+      height:100%;
+      background-color:white;
+      border-radius:0 0 5px 5px;
+      @include query(900px){
+        position:absolute;
+        width:100px;
+        top:20px;
+        left:0;
+        height:175px;
+        margin:0;
+        z-index:10;
+      }
+      a{
+        width:100%;
+        text-decoration:none;
+        margin-bottom:5px;
+        padding:5px 0;
+        padding-left:5px;
+        color:black;
+        &:hover{
+          background-color:$blue;
+          color:white;
+        }
+        &:last-child{
+          margin-bottom:0;
+        }
+        }
+      }
+     
+
+
+#slideshow-container{
+  width:90%;
+  height:300px;
+  margin-left:5%;
+  margin-top:5%;
+  position:relative;
+  border:1px solid $t-black;
+  border-radius:10px;
+  @include query(600px){
+    height:400px;   
+  }
+  @include query(900px){
+    height:500px;
+  }
+  @include query(1200px){
+    width:75%;
+    margin-left:12.5%;
+    margin-top:1%;
+  }
+  &:hover .prev {
+      display:block;
+  }
+  &:hover .next{
+    display:block;
+  }
+  
+}
+.slide{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:{
+    size:100% 100%;
+    repeat:no-repeat;
+  }
+  border-radius:10px;
+  &:nth-child(1){
+    background-image:url("https://www.opitrip.com/blog/wp-content/uploads/An-Extraordinary-Traveler-Group-Travel-2.jpg");
+  }
+  &:nth-child(2){
+    background-image:url("https://discover.rbcroyalbank.com/wp-content/uploads/banner-small-canadian-travel-food-edition_402x-2.jpg");
+  }
+  &:nth-child(3){
+    background-image:url("https://premiergazette.com/wp-content/uploads/2018/02/global-business.jpg");
+  }
+}
+
+
+.active{
+  background-color:$blue
+}
+.fade{
+  animation-duration:1.5s;
+  animation-name:fader;
+}
+@keyframes fader{
+  from {opacity:0.4}
+  to {opacity:1}
+}
+.dots-container{
+  @include flexer(flex,row,space-between,center);
+  position:absolute;
+  width:40px;
+  height:10px;
+  z-index:9;
+  bottom:10px;
+  left:10px;
+}
+.dots{
+  border:1px solid $t-black;
+  border-radius: 50%;
+  z-index:10;
+  height:10px;
+  width:10px;
+  &:hover {
+    @extend .active;
+  }
+   
+}
+.prev,.next{
+  cursor:pointer;
+  display:none;
+  position:absolute;
+  text-shadow:-2px 0px black;
+  top:45%;
+  z-index:100;
+  font-size:3em;
+  color:white;
+}
+.next{
+  display:none;
+  right:0;
+  text-shadow:2px 0px black;
+}
+.second-heading{
+  margin-top:10%;
+  @include query(900px){
+    margin-top:5%;
+  }
+   
+h1{
+  margin-left:5%;
+}
+}
+.category-container{
+  @include flexer(flex, column, space-between, center);
+  width:90%;
+  margin-left:5%;
+  
+  @include query(600px){
+    width:75%;
+    margin-left:12.5%;
+  }
+  @include query(900px){
+    width:90%;
+    margin-left:5%;
+    @include flexer(flex, row, space-between, space-between, wrap);
+  }
+}
+.category{
+  width:100%;
+  border:1px solid $t-black;
+  margin-bottom: 5%;
+  
+  @include query(900px){
+    width:45%;
+  }
+  @include query(1200px){
+    width:30%;
+  }
+}
+.cat-row{
+  
+}
+.small-category{
+  background-color:$blue;
+  color:white;
+  padding:0 5px;
+  border-radius:5px;
+  margin-left:5px;
+  margin-right:5px;
+}
+.third-heading{
+  h1{
+    margin-left:5%;
+  }
+}
+.bottom-category-container{
+  @include flexer(flex,column,center,center);
+  width:90%;
+  margin-left:5%;
+}
+.bottom-category{
+  @include flexer(flex,column,flex-start,center);
+  width:100%;
+  margin-bottom:5%;
+  border:1px solid $t-black;
+  .cat-pic {
+    width:100%;
+    height:auto;
+    @include query(600px){
+      height:100%;
+      width:25%;
+    }
+  }
+  h2{
+    margin:0;
+    font-size:1.2em;
+  }
+  @include query(600px){
+    @include flexer(flex,row,flex-start,center);
+   
+  }
+
+}
+.back-to-top{
+  width:100%;
+  height:30px;
+  text-align:center;
+  color:white;
+  font-size:1.2em;
+  background-color:#414142;
+}
+.bottom-info-container{
+  width:100%;
+  background-color:black;
+}
+.bottom-middler{
+  @include flexer(flex,row,space-between,center);
+  background-color:black;
+  padding-top:5%;
+  width:80%;
+  margin-left:10%;
+}
+.bottom-info{
+  @include flexer(flex,column,flex-start,center);
+  color:white;
+  width:30%;
+  height:150px;
+  h3{
+    margin-top:0;
+  }
+  a{
+    color:white;
+    text-decoration:none;
+    margin-bottom:5px;
+  }
+  
+}
