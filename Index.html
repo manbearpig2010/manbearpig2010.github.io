@@ -1,0 +1,582 @@
+<!doctype html>
+<html>
+<head>
+<title>Krause Hotels</title>
+<link rel="stylesheet" href="krause_hotel2.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+@media only screen and (min-width:600px){
+
+.hotel_panel{
+	height:200px;
+	width:90%;
+	}
+}
+@media only screen and (min-width:900px){
+.top_pic_container img{
+height:80vh;
+}
+
+#inner_overlay span{
+width:60%;
+}
+.hotel_container{
+	flex-flow:row wrap;
+	width:85%;
+	margin-left:7.5%;
+	justify-content:space-between;
+	}
+.panel_container{
+	width:50%;
+	}
+.bottom_pics:first-child{
+	display:flex;
+}
+.bottom_pics {
+	width:50%;
+	height:50%;
+	}
+.nest:nth-child(2){
+	height:400px;
+	}
+.end_container{
+	height:700px;
+	}
+.bottom_pics:nth-child(3),.bottom_pics:nth-child(5){
+display:flex;
+}
+}
+@media only screen and (min-width:1200px){
+#middle_overlay{
+width:50%;
+}
+#middle_overlay span{
+width:80%;
+}
+#middle_pic_container{
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+#middle_room1{
+width:50%;
+height:400px;
+
+}
+#middle_room2{
+display:flex;
+width:50%;
+height:400px;
+
+
+}
+
+#nav_bar{
+height:70px;
+}
+.nav_logo{
+position:relative;
+z-index:1;
+width:15%;
+justify-content:center;
+align-items:center;
+height:120px;
+background-color:black;
+color:white;
+margin-left:2.5%;
+}
+.nav_logo h1 {
+	color:white;
+	margin:0;
+	}
+.nav_logo h2 {
+	color:white;
+	margin:0;
+	}
+.spacer{
+	display:flex;
+	}
+#search_bar_container{
+transform:translateY(-350%);
+width:60%;
+margin-left:20%;
+background-color:transparent;
+}
+#date_pick{
+display:flex;
+text-align:center;
+border:.5px solid black;
+}
+#search_bar{
+width:50%;
+border:2px solid black;
+}
+#search_bar input[type=text]{
+background-color:white;
+color:black;
+}
+#search_button{
+width:23%;
+font-size:100%;
+border:2px solid black;
+}
+#middle_pic_container:first-child{
+width:50%;
+}
+#middle_pic_container:nth-child(2){
+display:flex;     
+width:50%;
+}
+}
+</style>
+</head>
+<body id="page">
+<div id="nav_bar">
+  <div class="nav_logo">
+    <h1>Krause</h1>
+	<h2>Hotels</h2>
+  </div>
+  <div class="spacer">
+  </div>
+  <div class="logo_container">
+  <div class="nav_button">
+    <img src="pictures/head.png" height="30px" width="30px">
+	<p>Login</p>
+	</div>
+	<div class="dropdown">
+	<form action="" method="post">
+		<label>Username: <input type="text" name="username"></label>
+		<label>Password: <input type="password" name="password"></label>
+		<input type="submit" name="submit" value="Login">
+	</form>
+	</div>
+  
+  <div class="nav_button">
+    <img src="pictures/menu2.png" height="auto" width="40px">
+	<p style="padding:0;margin-top:-5px;">Menu</p>
+  </div>
+  </div>
+</div>
+<div class="top_pic_container">
+  <img src="pictures/hotel.jpg">
+</div>
+<div id="search_bar_container">
+  <div id="search_bar">
+    <input type="text" placeholder=" Where To?" size="50">
+  </div>
+  <div id="date_pick">
+    <input type="date" size="50" style="text-align:center;">
+  </div>
+  <button type="submit" id="search_button">Search Rates</button>
+</div>
+<div class="header2">
+  <h1>Luxury Hotels</h1>
+  <h2>Luxury Experience</h2>
+  <div class="header_line">
+  </div>
+</div>
+<div id="middle_pic_container">
+  <img src="pictures/room1.jpg" id="middle_room1">
+  <img src="pictures/room11.jpg" id="middle_room2">
+  <div id="middle_overlay">
+    <div id="inner_overlay">
+	<h1 style="color:#f9e25e;transform:translateY(-20%);font-family:Garamond;">A Suite Escape</h1>
+	  <span><p>Treat yourself to a three night stay in
+	  an affordable luxurious suite and
+	  get a complementary fourth night. 
+	  Exclusive offer is valid until December 31, 2018.</p></span>
+	  <button id="learnMore">Learn More</button>
+	</div>
+  </div>
+</div>
+<div class="header2">
+  <h1>Hotel Offers</h1>
+  <div class="header_line">
+  </div>
+</div>
+<div class="hotel_container">
+ <div class="panel_container">
+  <div class="hotel_panel" style="background-image: url('pictures/hotel2.png');">
+    <h2 style="color:white;">Krause Resort & Hotel</h2>
+	<h3 id="offer" style="color:white">View Offers</h3>
+   </div>
+<div class="popout_container">
+  <div class="popout_panel">
+    <div class="slideshow_container" >
+	  <div class="slides" name="slider0">
+		<div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$269.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room4.jpg" height="75%" width="100%">
+	    <p>Luxury Suite with Kitchenette</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="slides" name="slider0">
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$210.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room13.jpg" height="75%" width="100%">
+	    <p>King Room</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="slides" name="slider0">
+		<div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$189.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room14.jpg" height="75%" width="100%">
+	    <p>Simple Beauty</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="prev" onclick="moveSlide(-1,0)">&#10094;</div>
+	  <div class="next" onclick="moveSlide(1,0)">&#10095;</div>
+    </div>
+  </div>
+</div>
+  <!--EXPERIMENTING HERE -->
+<div class="hotel_panel" style="background-image: url('pictures/hotel3.png');">
+  <h2 style="color:white;">Krause Palais Extravagant</h2>
+  <h3 style="color:white">View Offers</h3>
+</div>
+<div class="popout_container">
+  <div class="popout_panel">
+    <div class="slideshow_container" >
+	  <div class="slides" name="slider1">
+		<div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$850.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room5.jpg" height="75%" width="100%">
+	    <p>Royal Suite</p>
+	    <a href="#">Learn More</a>
+	  </div>
+	<div class="slides" name="slider1">
+	  <div class="price">
+	    <h4><i>From</i></h4>
+	    <h2>$2200.00</h2>
+	    <h4>per night</h4>
+	  </div>
+      <img src="pictures/room15.jpg" height="75%" width="100%">
+	  <p>Presidential Penthouse</p>
+	  <a href="#">Learn More</a>
+	</div>
+	<div class="slides" name="slider1">
+	  <div class="price">
+	    <h4><i>From</i></h4>
+	    <h2>$1000.00</h2>
+	    <h4>per night</h4>
+	  </div>
+      <img src="pictures/room16.jpg" height="75%" width="100%">
+	  <p>Comfort Suite</p>
+	  <a href="#">Learn More</a>
+	</div>
+	<div class="prev" onclick="moveSlide(-1,1)">&#10094;</div>
+	<div class="next" onclick="moveSlide(1,1)">&#10095;</div>
+	</div>
+  </div>
+</div>
+ <!-- EXPERIMENTING HERE -->
+<div class="hotel_panel" style="background-image: url('pictures/hotel4.png');">
+  <h2 style="color:white;">Chateau De Krause</h2>
+  <h3 style="color:white">View Offers</h3>
+</div>
+<div class="popout_container">
+  <div class="popout_panel">
+    <div class="slideshow_container" >
+	  <div class="slides" name='slider2'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$380.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room6.jpg" height="75%" width="100%">
+	    <p>Renaissance Room</p>
+	    <a href="#">Learn More</a>
+     </div>
+	 <div class="slides" name='slider2'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$700.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room21.jpg" height="75%" width="100%">
+	    <p>King Arthur Suite</p>
+	    <a href="#">Learn More</a>
+     </div>
+	 <div class="slides" name='slider2'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$500.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room22.jpg" height="75%" width="100%">
+	    <p>Knight Suite</p>
+	    <a href="#">Learn More</a>
+     </div>
+     <div class="prev" onclick="moveSlide(-1, 2)">&#10094;</div>
+	 <div class="next" onclick="moveSlide(1, 2)">&#10095;</div>
+  </div>
+ </div>
+</div> 
+</div>
+<div class="panel_container">
+  <div class="hotel_panel" style="background-image: url('pictures/hotel5.png');">
+    <h2 style="color:white;">Krause Villa</h2>
+	<h3 style="color:white">View Offers</h3>
+  </div>
+  <div class="popout_container">
+    <div class="popout_panel">
+      <div class="slideshow_container" >
+	    <div class="slides" name='slider3'>
+	      <div class="price">
+	        <h4><i>From</i></h4>
+	        <h2>$980.00</h2>
+	        <h4>per night</h4>
+	      </div>
+          <img src="pictures/room7.jpg" height="75%" width="100%">
+	      <p>Beach Villa Suite</p>
+	      <a href="#">Learn More</a>
+        </div>
+		<div class="slides" name='slider3'>
+	      <div class="price">
+	        <h4><i>From</i></h4>
+	        <h2>$500.00</h2>
+	        <h4>per night</h4>
+	      </div>
+          <img src="pictures/room17.jpg" height="75%" width="100%">
+	      <p>Suite on the Beach</p>
+	      <a href="#">Learn More</a>
+        </div>
+		<div class="slides" name='slider3'>
+	      <div class="price">
+	        <h4><i>From</i></h4>
+	        <h2>$600.00</h2>
+	        <h4>per night</h4>
+	      </div>
+          <img src="pictures/room18.jpg" height="75%" width="100%">
+	      <p>Luxury Beach Villa</p>
+	      <a href="#">Learn More</a>
+        </div>
+		<div class="prev" onclick="moveSlide(-1, 3)">&#10094;</div>
+	    <div class="next" onclick="moveSlide(1, 3)">&#10095;</div>
+      </div>
+	</div>
+  </div>
+  <div class="hotel_panel" style="background-image: url('pictures/hotel6.png');">
+    <h2 style="color:white;">Lumières Vivantes</h2>
+	<h3 style="color:white">View Offers</h3>
+  </div>
+  <div class="popout_container">
+  <div class="popout_panel">
+    <div class="slideshow_container" >
+	  <div class="slides" name='slider4'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$760.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room8.jpg" height="75%" width="100%">
+	    <p>Royal Palace Suite</p>
+	    <a href="#">Learn More</a>
+      </div>
+    <div class="slides" name='slider4'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$800.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room19.jpg" height="75%" width="100%">
+	    <p>Elegant Suite</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="slides" name='slider4'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$900.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room20.jpg" height="75%" width="100%">
+	    <p>Vintage Luxury Suite</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="prev" onclick="moveSlide(-1, 4)">&#10094;</div>
+	  <div class="next" onclick="moveSlide(1, 4)">&#10095;</div>
+	</div>
+  </div>
+</div>
+  <div class="hotel_panel"style="background-image: url('pictures/hotel7.png');">
+    <h2 style="color:white;">Krause Beach Getaway</h2>
+	<h3 style="color:white">View Offers</h3>
+  </div>
+  <div class="popout_container">
+  <div class="popout_panel">
+    <div class="slideshow_container" >
+	  <div class="slides" name='slider5'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$1200.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room9.jpg" height="75%" width="100%">
+	    <p>Beach Villa Suite</p>
+	    <a href="#">Learn More</a>
+      </div>
+      <div class="slides" name='slider5'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$900.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room23.jpg" height="75%" width="100%">
+	    <p>Beach View Suite</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="slides" name='slider5'>
+	    <div class="price">
+	      <h4><i>From</i></h4>
+	      <h2>$800.00</h2>
+	      <h4>per night</h4>
+	    </div>
+        <img src="pictures/room24.jpg" height="75%" width="100%">
+	    <p>Simple Beach</p>
+	    <a href="#">Learn More</a>
+      </div>
+	  <div class="prev" onclick="moveSlide(-1, 5)">&#10094;</div>
+	  <div class="next" onclick="moveSlide(1, 5)">&#10095;</div>
+	</div> 
+ </div>
+</div>
+</div>
+<div class="end_container">
+  <div class="nest">
+<h2>Krause Hotels</h2>
+<h1>Experience <i>True</i> Luxury</h1>
+</div>
+  <div class="nest">
+	<div class="bottom_pics">
+	  <img src="pictures/room10.jpg" width="100%" height="100%">
+	</div>
+	<div class="bottom_pics">
+    <img src="pictures/room2.jpg" width="100%" height="100%">
+	</div>
+	<div class="bottom_pics">
+	<h2 style="font-family:Garamond">JOIN THE KRAUSE LIFESTYLE</h1>
+	  <div class="icons">
+	    <a href="#"> <img src="pictures/facebook.png" width="50px" height="50px"></a>
+		<a href="#"> <img src="pictures/twitter.png" width="50px" height="50px"></a>
+		<a href="#"> <img src="pictures/instagram.png" width="50px" height="50px"></a>
+	  </div>
+	</div>
+	<div class="bottom_pics">
+	<img src="pictures/room3.jpg" width="100%" height="100%">
+	</div>
+	<div class="bottom_pics">
+	</div>
+  </div>
+  <div class="nest">
+  <a href="#">About</a><a href="#">Contact</a><a href="#">Terms of Service</a>
+  </div>
+</div>
+<script>
+
+
+$(document).ready(function(){
+if (window.innerWidth >= 1200){
+const top_pic = document.querySelector('.top_pic_container img');
+top_pic.setAttribute("src","pictures/pool.gif");
+}
+$(window).resize(function(){
+if (window.innerWidth >= 1200){
+const top_pic = document.querySelector('.top_pic_container img');
+top_pic.setAttribute("src","pictures/pool.gif");
+}
+else if (window.innerWidth < 1200){
+const top_pic = document.querySelector('.top_pic_container img');
+top_pic.setAttribute("src","pictures/hotel.jpg");
+}
+});
+
+  $(".hotel_panel").click(function(){
+   if($(this).find("h3").text() == "View Offers"){
+		$(this).find("h3").text("Hide Offers");
+		}
+	else {
+		$(this).find("h3").text("View Offers");
+		}
+	$(this).next(".popout_container").toggleClass('open').delay(20).queue(function(next){
+		$(this).toggleClass('slide');
+		next();
+		});
+ });
+ $(".nav_button").click(function(){
+   $(this).next('.dropdown').toggleClass("flexer");
+ });
+ 
+});
+/*var slideIndex = 1;
+showSlides(slideIndex);
+function moveSlide(n){
+  showSlides(slideIndex += n);
+}
+function showSlides(n){
+  var i;
+  var slides = document.querySelectorAll('.slides');
+  if (n > slides.length){slideIndex = 1;}
+  if (n < 1){slideIndex = slides.length;}
+  slides.forEach(slide => slide.style.display = "none");
+  slides[slideIndex-1].style.display = "block";
+}
+*/
+var slideIndex = new Array(4);
+slideIndex[0]=1;
+slideIndex[1]=1;
+slideIndex[2]=1;
+slideIndex[3]=1;
+slideIndex[4]=1;
+slideIndex[5]=1;
+
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+showSlides(1, 5);
+function moveSlide(n, slideshownumber){
+  slideIndex[slideshownumber] = slideIndex[slideshownumber] + n;
+  showSlides(slideIndex[slideshownumber], slideshownumber);
+}
+function currentSlide(n, slideshownumber)
+{
+slideIndex[slideshownumber] = n;
+  showSlides(slideIndex[slideshownumber], slideshownumber);
+}
+function showSlides(n, slideshownumber){
+  var i;
+  var slideshowname = "slider" + slideshownumber;
+  var slides = document.getElementsByName(slideshowname);
+  if (n > slides.length){slideIndex[slideshownumber] = 1;}
+  if (n < 1){slideIndex[slideshownumber] = slides.length;}
+  for (i=0; i < slides.length; i++){
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex[slideshownumber]-1].style.display = "block";
+}
+
+
+
+/*
+const previous = document.querySelector('.prev');
+previous.addEventListener('click',moveSlide(-1));
+const next = document.querySelector('.next');
+next.addEventListener('click', moveSlide(1));
+*/
+</script>
+</body>
+</html>
