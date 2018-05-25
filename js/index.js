@@ -1,3 +1,7 @@
+const popouts = document.getElementsByClassName('popout_container');
+for(i=0; i < popouts.length; i++){
+	popouts[i].style.display = 'none';
+}
 $(document).ready(function(){
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
@@ -21,10 +25,7 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 	else {
 		$(this).find("h3").text("View Offers");
 		}
-	$(this).next(".popout_container").toggleClass('open').delay(20).queue(function(next){
-		$(this).toggleClass('slide');
-		next();
-		});
+	$(this).next(".popout_container").slideToggle();
  });
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
