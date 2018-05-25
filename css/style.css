@@ -406,20 +406,17 @@ p{
 	width:50%;
 	height:100%;
 }
-.bottom_pics:first-child{ 
+.bottom_pics:nth-child(2){ 
 	display:none;
 }
-.bottom_pics:nth-child(3){
+.bottom_pics:nth-child(4){
 	display:none;
-	
-	width:25%;
-	height:50%;
 	justify-content:center;
 	flex-direction:column;
 	text-align:center;
 }
-.bottom_pics:nth-child(4){
-	width:45%;
+.bottom_pics:nth-child(5){
+	display:none;
 }
 .icons{
 	margin-top:10px;
