@@ -1,12 +1,12 @@
 $(document).ready(function(){
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
-top_pic.setAttribute("src","https://i.imgur.com/D1X5OJP.mp4");
+top_pic.setAttribute("src","https://cbbain.blob.core.windows.net/photos/site/homepage%20images/poolv5b.gif");
 }
 $(window).resize(function(){
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
-top_pic.setAttribute("src","https://i.imgur.com/D1X5OJP.mp4");
+top_pic.setAttribute("src","https://cbbain.blob.core.windows.net/photos/site/homepage%20images/poolv5b.gif");
 }
 else if (window.innerWidth < 1200){
 const top_pic = document.querySelector('.top_pic_container img');
