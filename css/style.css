@@ -267,7 +267,6 @@ p{
 	display:flex;
 }
 .popout_container.slide{
-	border:1px solid red;
 	transform:translateY(-10%);
 	height:400px;
 	
