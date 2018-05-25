@@ -248,15 +248,15 @@ p{
 }
 
 .popout_container{
-	display:none;
+	display:flex;
 	width:100%;
 	flex-direction:row;
 	justify-content:center;
 	align-items:flex-end;
 	z-index:0;
 	position:relative;
-	
-	height:0;
+	transform:translateY(-10%);
+	height:400px;
 	background-color:#494848;
 	transition:.7s;
 	
@@ -284,7 +284,8 @@ p{
 	flex-direction:column;
 	justify-content:flex-start;
 	align-items:center;
-	height:0px;
+	border:2px solid white;
+	height:320px;
 	margin-bottom:10px;
 	position:relative;
 	transition:1s;
