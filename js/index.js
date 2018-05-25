@@ -1,16 +1,16 @@
 $(document).ready(function(){
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
-top_pic.setAttribute("src","pictures/pool.gif");
+top_pic.setAttribute("src","https://i.imgur.com/D1X5OJP.mp4");
 }
 $(window).resize(function(){
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
-top_pic.setAttribute("src","pictures/pool.gif");
+top_pic.setAttribute("src","https://i.imgur.com/D1X5OJP.mp4");
 }
 else if (window.innerWidth < 1200){
 const top_pic = document.querySelector('.top_pic_container img');
-top_pic.setAttribute("src","pictures/hotel.jpg");
+top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
 
