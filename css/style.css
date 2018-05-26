@@ -104,10 +104,10 @@ h2{
 .top_pic_container{
 	display:flex;
 	width:100%;
-	height:auto;
+	height:250px;
 }
 .top_pic_container img{
-	height:auto;
+	height:100%;
 	width:100%;
 }
 #search_bar_container{
