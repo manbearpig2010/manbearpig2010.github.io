@@ -44,7 +44,7 @@ else{
 	
 $(".hotel_panel").on('click', function(){
  /* if(touchmoved != true){*/
-	$(this).find('.popout_container').slideToggle();
+	$(this).next('.popout_container').slideToggle();
 /*}
   }).on('touchmove',function(e){
 	  touchmoved = true;
