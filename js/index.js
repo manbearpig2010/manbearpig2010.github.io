@@ -1,22 +1,22 @@
 const popouts = document.getElementsByClassName('popout_container');
 for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
-	popouts[i].addEventListener('transitionend', changeOffer);
+	/*popouts[i].addEventListener('transitionend', changeOffer);*/
 
 }
-function changeOffer(){
+/*function changeOffer(){
 if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
 	else {
 		$(this).find("h3").text("View Offers");
 		}
-}
-var didTouch = false;
+}*/
+/*var didTouch = false;
 window.addEventListener('touchstart', didTheyTouch);
 function didTheyTouch(){
 	didTouch = true;
-}
+}*/
 $(document).ready(function(){
 	
 if (window.innerWidth >= 1200){
@@ -42,10 +42,10 @@ else{
 }
 */
 	
-$(".hotel_panel").on('click', function(){
- /* if(touchmoved != true){*/
+$(".hotel_panel").on('touchend', function(){
+  if(touchmoved != true){
 	$(this).next('.popout_container').slideToggle();
-/*}
+}
   }).on('touchmove',function(e){
 	  touchmoved = true;
   }).on('touchstart',function(){
