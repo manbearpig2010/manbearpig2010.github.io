@@ -390,6 +390,9 @@ p{
 	align-items:center;
 	
 }
+.nest:first-child{
+	font-size:1.3em;
+}
 .nest:nth-child(2){
 	width:100%;
 	flex-direction:row;
