@@ -67,9 +67,7 @@ if(didTouch == true){
   }).on('touchstart',function(){
 	  touchmoved = false;
   }
-	else{
-	return;
-	}
+	
  });
 
  $(".nav_button").click(function(){
