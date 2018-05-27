@@ -36,10 +36,9 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 var touchmoved;
 
   $(".hotel_panel").on('touchend', touchScreen);
-}
-else{
+
      $(".hotel_panel").on('click', desktopScreen);
-}
+
 function desktopScreen(){
 	if(didTouch == false){
   if(touchmoved != true){
