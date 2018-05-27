@@ -263,6 +263,10 @@ p{
 	background-color:#494848;
 	
 }
+.slides:first-child p{
+	font-size:.9em;
+}
+	
 .popout_container.open{
 	
 	
