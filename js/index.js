@@ -1,7 +1,7 @@
 const popouts = document.getElementsByClassName('popout_container');
 for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
-	/*popouts[i].addEventListener('transitionend', changeOffer);*/
+	
 
 }
 /*function changeOffer(){
@@ -12,11 +12,11 @@ if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("View Offers");
 		}
 }*/
-/*var didTouch = false;
+var didTouch = false;
 window.addEventListener('touchstart', didTheyTouch);
 function didTheyTouch(){
 	didTouch = true;
-}*/
+}
 $(document).ready(function(){
 	
 if (window.innerWidth >= 1200){
@@ -34,15 +34,14 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
 var touchmoved;
-/*if (didTouch == true){	
+
   $(".hotel_panel").on('touchend', touchScreen);
 }
 else{
-     $(".hotel_panel").on('click', touchScreen);
+     $(".hotel_panel").on('click', desktopScreen);
 }
-*/
-	
-$(".hotel_panel").on('touchend', function(){
+function desktopScreen(){
+	if(didTouch == false){
   if(touchmoved != true){
 	  if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
@@ -56,7 +55,33 @@ $(".hotel_panel").on('touchend', function(){
 	  touchmoved = true;
   }).on('touchstart',function(){
 	  touchmoved = false;
- });
+  }
+	else{
+	return;
+	}
+ }
+	
+/*$(".hotel_panel").on('touchend', function(){*/
+function touchScreen(){
+if(didTouch == true){
+  if(touchmoved != true){
+	  if($(this).find("h3").text() == "View Offers"){
+		$(this).find("h3").text("Hide Offers");
+		}
+	else {
+		$(this).find("h3").text("View Offers");
+		}
+	$(this).next('.popout_container').slideToggle();
+}
+  }).on('touchmove',function(e){
+	  touchmoved = true;
+  }).on('touchstart',function(){
+	  touchmoved = false;
+  }
+	else{
+	return;
+	}
+ }
 
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
