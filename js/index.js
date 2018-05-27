@@ -3,9 +3,10 @@ for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
 }
 var didTouch = false;
-window.addEventListener('touchstart', function(){
+window.addEventListener('touchstart', didTheyTouch);
+function didTheyTouch(){
 	didTouch = true;
-});
+}
 $(document).ready(function(){
 	
 if (window.innerWidth >= 1200){
@@ -47,10 +48,11 @@ if(touchmoved != true){
   }).on('touchstart',function(){
 	  touchmoved = false;
  });
+}
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
  });
-}
+
 /*var slideIndex = 1;
 showSlides(slideIndex);
 function moveSlide(n){
