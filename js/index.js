@@ -35,11 +35,7 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 });
 var touchmoved;
 
-  $(".hotel_panel").on('touchend', touchScreen);
-
-     $(".hotel_panel").on('click', desktopScreen);
-
-function desktopScreen(){
+$(".hotel_panel").on('click',function(){
 	if(didTouch == false){
   if(touchmoved != true){
 	  if($(this).find("h3").text() == "View Offers"){
@@ -58,9 +54,9 @@ function desktopScreen(){
 	else{
 	return;
 	}
- }
+ });
 	
-/*$(".hotel_panel").on('touchend', function(){*/
+$(".hotel_panel").on('touchend', function(){
 function touchScreen(){
 if(didTouch == true){
   if(touchmoved != true){
@@ -80,7 +76,7 @@ if(didTouch == true){
 	else{
 	return;
 	}
- }
+ });
 
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
