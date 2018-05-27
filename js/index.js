@@ -24,16 +24,17 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
 var touchmoved;
-if (didTouch == true){	
+/*if (didTouch == true){	
   $(".hotel_panel").on('touchend', touchScreen);
 }
 else{
      $(".hotel_panel").on('click', touchScreen);
 }
-
-	 function touchScreen() {
+*/
+	 $(".hotel_panel").on('touchend click', function(){
 if(touchmoved != true){
-	 if($(this).find("h3").text() == "View Offers"){
+	
+	if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
 	else {
@@ -48,7 +49,7 @@ if(touchmoved != true){
   }).on('touchstart',function(){
 	  touchmoved = false;
  });
-}
+
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
  });
