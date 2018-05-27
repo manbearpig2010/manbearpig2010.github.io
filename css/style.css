@@ -390,7 +390,7 @@ p{
 	align-items:center;
 	
 }
-.nest:first-child{
+.nest:first-child h1{
 	font-size:1.3em;
 }
 .nest:nth-child(2){
