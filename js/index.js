@@ -1,6 +1,16 @@
 const popouts = document.getElementsByClassName('popout_container');
 for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
+	popouts[i].addEventListener('transitionend', changeOffer);
+
+}
+function changeOffer(){
+if($(this).find("h3").text() == "View Offers"){
+		$(this).find("h3").text("Hide Offers");
+		}
+	else {
+		$(this).find("h3").text("View Offers");
+		}
 }
 var didTouch = false;
 window.addEventListener('touchstart', didTheyTouch);
@@ -31,16 +41,9 @@ else{
      $(".hotel_panel").on('click', touchScreen);
 }
 */
-	 $(".hotel_panel").on('touchend', function(){
-if(touchmoved != true){
-	if($(this).find("h3").text() == "View Offers"){
-		$(this).find("h3").text("Hide Offers");
-		}
-	else {
-		$(this).find("h3").text("View Offers");
-		}
-}
-if(touchmoved != true){
+	
+$(".hotel_panel").on('touchend', function(){
+  if(touchmoved != true){
 	$(this).find('.popout_container').slideToggle();
 }
   }).on('touchmove',function(e){
