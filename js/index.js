@@ -33,7 +33,7 @@ else{
 */
 	 $(".hotel_panel").on('touchend', function(){
 if(touchmoved != true){
-	$(this).next(".popout_container").slideToggle();
+	/*$(this).next(".popout_container").slideToggle();*/
 	if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
