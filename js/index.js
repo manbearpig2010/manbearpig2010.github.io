@@ -36,7 +36,9 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 var touchmoved;
 
 $(".hotel_panel").on('click',function(){
-	if(didTouch == false){
+	if(didTouch == true){
+		return;
+	}
 	  if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
@@ -44,11 +46,6 @@ $(".hotel_panel").on('click',function(){
 		$(this).find("h3").text("View Offers");
 		}
 	$(this).next('.popout_container').slideToggle();
-}
-
-	else{
-	return;
-	}
  });
 	
 $(".hotel_panel").on('touchend', function(){
