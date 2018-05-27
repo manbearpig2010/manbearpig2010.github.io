@@ -49,7 +49,7 @@ $(".hotel_panel").on('touchend', function(){
   }).on('touchmove',function(e){
 	  touchmoved = true;
   }).on('touchstart',function(){
-	  touchmoved = false;*/
+	  touchmoved = false;
  });
 
  $(".nav_button").click(function(){
