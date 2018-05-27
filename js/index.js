@@ -19,7 +19,7 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 });
 var touchmoved;
 	
-  $(".hotel_panel").on('touchend click', function(){
+  $(".hotel_panel").on('touchend', function(){
 
    if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
