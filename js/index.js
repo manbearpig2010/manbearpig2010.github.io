@@ -52,7 +52,6 @@ $(".hotel_panel").on('click',function(){
  });
 	
 $(".hotel_panel").on('touchend', function(){
-function touchScreen(){
 if(didTouch == true){
   if(touchmoved != true){
 	  if($(this).find("h3").text() == "View Offers"){
