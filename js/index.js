@@ -18,7 +18,7 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
 
-  $(".hotel_panel").click(function(){
+  $(".hotel_panel").on('touchstart', function(){
    if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
