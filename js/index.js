@@ -37,7 +37,6 @@ var touchmoved;
 
 $(".hotel_panel").on('click',function(){
 	if(didTouch == false){
-  if(touchmoved != true){
 	  if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
@@ -46,11 +45,7 @@ $(".hotel_panel").on('click',function(){
 		}
 	$(this).next('.popout_container').slideToggle();
 }
-  }).on('touchmove',function(e){
-	  touchmoved = true;
-  }).on('touchstart',function(){
-	  touchmoved = false;
-  }
+
 	else{
 	return;
 	}
