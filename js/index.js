@@ -30,18 +30,18 @@ if (didTouch == true){
 else{
      $(".hotel_panel").on('click', touchScreen);
 }
-function desktop(){
-	
-}
+
 	 function touchScreen() {
 if(touchmoved != true){
-	$(this).next(".popout_container").slideToggle();
 	 if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
 	else {
 		$(this).find("h3").text("View Offers");
 		}
+}
+if(touchmoved != true){
+	$(this).next(".popout_container").slideToggle();
 }
   }).on('touchmove',function(e){
 	  touchmoved = true;
