@@ -42,14 +42,14 @@ else{
 }
 */
 	
-$(".hotel_panel").on('touchend', function(){
-  if(touchmoved != true){
+$(".hotel_panel").on('click', function(){
+ /* if(touchmoved != true){*/
 	$(this).find('.popout_container').slideToggle();
-}
+/*}
   }).on('touchmove',function(e){
 	  touchmoved = true;
   }).on('touchstart',function(){
-	  touchmoved = false;
+	  touchmoved = false;*/
  });
 
  $(".nav_button").click(function(){
