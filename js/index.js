@@ -34,11 +34,14 @@ else{
 	 $(".hotel_panel").on('touchend', function(){
 if(touchmoved != true){
 	if($(this).find("h3").text() == "View Offers"){
-		$(this).find("h3").text("Butt Offers");
+		$(this).find("h3").text("Hide Offers");
 		}
 	else {
 		$(this).find("h3").text("View Offers");
 		}
+}
+if(touchmoved != true){
+	$(this).find('.popout_container').slideToggle();
 }
   }).on('touchmove',function(e){
 	  touchmoved = true;
