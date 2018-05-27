@@ -31,7 +31,7 @@ else{
      $(".hotel_panel").on('click', touchScreen);
 }
 */
-	 $(".hotel_panel").on('touchend click', function(){
+	 $(".hotel_panel").on('touchend', function(){
 if(touchmoved != true){
 	$(this).next(".popout_container").slideToggle();
 	if($(this).find("h3").text() == "View Offers"){
