@@ -33,6 +33,9 @@ const top_pic = document.querySelector('.top_pic_container img');
 top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
+$(".nav_button:nth-child(3)").click(function(){
+	$('#slide_menu').slideToggle();
+});
 var touchmoved;
 
 $(".hotel_panel").on('click',function(){
