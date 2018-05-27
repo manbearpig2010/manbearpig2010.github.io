@@ -17,15 +17,23 @@ const top_pic = document.querySelector('.top_pic_container img');
 top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
+var touchmoved;
+	
+  $(".hotel_panel").on('touchend click', function(){
 
-  $(".hotel_panel").on('click', function(){
    if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
 	else {
 		$(this).find("h3").text("View Offers");
 		}
+if(touchmoved != true){
 	$(this).next(".popout_container").slideToggle();
+}
+  }).on('touchmove',function(e){
+	  touchmoved = true;
+  }).on('touchstart',function(){
+	  touchmoved = false;
  });
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
