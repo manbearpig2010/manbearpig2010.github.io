@@ -93,6 +93,46 @@ form{
 	align-items:center;
 	margin-left:20px;
 }
+#slide_menu{
+	height:200px;
+	width:150px;
+	display:flex;
+	z-index:10;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	position:absolute;
+	top:70px;
+	right:0px;
+	border:2px solid black;
+	background-color:white;
+	text-align:center;
+}
+#slide_menu a{
+	width:50%;
+	text-decoration:none;
+	color:black;
+	position:relative;
+	
+	padding:5px 0;
+}
+#slide_menu a:hover{
+	font-weight:bold;
+}
+#slide_menu a:before{
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color:gold;
+	width:100%;
+	transform:scaleX(0);
+	transition:.3s;
+	height:2px;
+}
+#slide_menu a:hover:before{
+	transform:scaleX(1);
+}
 h1{
 	margin:0;
 	padding:0;
