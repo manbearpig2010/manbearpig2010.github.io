@@ -2,7 +2,12 @@ const popouts = document.getElementsByClassName('popout_container');
 for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
 }
+var didTouch = false;
+window.addEventListener('touchstart', function(){
+	didTouch = true;
+});
 $(document).ready(function(){
+	
 if (window.innerWidth >= 1200){
 const top_pic = document.querySelector('.top_pic_container img');
 top_pic.setAttribute("src","https://cbbain.blob.core.windows.net/photos/site/homepage%20images/poolv5b.gif");
@@ -18,17 +23,24 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 }
 });
 var touchmoved;
+if (didTouch == true){	
+  $(".hotel_panel").on('touchend', touchScreen);
+}
+else{
+     $(".hotel_panel").on('click', touchScreen);
+}
+function desktop(){
 	
-  $(".hotel_panel").on('touchend', function(){
-
-   if($(this).find("h3").text() == "View Offers"){
+}
+	 function touchScreen() {
+if(touchmoved != true){
+	$(this).next(".popout_container").slideToggle();
+	 if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
 	else {
 		$(this).find("h3").text("View Offers");
 		}
-if(touchmoved != true){
-	$(this).next(".popout_container").slideToggle();
 }
   }).on('touchmove',function(e){
 	  touchmoved = true;
@@ -38,8 +50,7 @@ if(touchmoved != true){
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
  });
- 
-});
+}
 /*var slideIndex = 1;
 showSlides(slideIndex);
 function moveSlide(n){
