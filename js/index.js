@@ -36,9 +36,6 @@ top_pic.setAttribute("src","https://i.imgur.com/hnkOIpI.jpg");
 var touchmoved;
 
 $(".hotel_panel").on('click',function(){
-	if(didTouch == true){
-		return;
-	}
 	  if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
 		}
@@ -48,7 +45,7 @@ $(".hotel_panel").on('click',function(){
 	$(this).next('.popout_container').slideToggle();
  });
 	
-$(".hotel_panel").on('touchend', function(){
+/*$(".hotel_panel").on('touchend', function(){
   if(touchmoved != true){
 	  if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
@@ -63,7 +60,7 @@ $(".hotel_panel").on('touchend', function(){
   }).on('touchstart',function(){
 	  touchmoved = false;
 	
- });
+ });*/
 
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
