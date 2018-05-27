@@ -1,9 +1,9 @@
 const popouts = document.getElementsByClassName('popout_container');
 for(i=0; i < popouts.length; i++){
 	popouts[i].style.display = 'none';
-	
-
 }
+const slideMenu = document.getElementById('slide_menu');
+slideMenu.style.display = "none";
 /*function changeOffer(){
 if($(this).find("h3").text() == "View Offers"){
 		$(this).find("h3").text("Hide Offers");
