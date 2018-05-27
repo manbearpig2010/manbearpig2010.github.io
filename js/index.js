@@ -53,7 +53,7 @@ if(touchmoved != true){
  $(".nav_button").click(function(){
    $(this).next('.dropdown').toggleClass("flexer");
  });
-
+});
 /*var slideIndex = 1;
 showSlides(slideIndex);
 function moveSlide(n){
