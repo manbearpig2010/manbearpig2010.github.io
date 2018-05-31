@@ -8,7 +8,7 @@ $off-white:#FAFAFA;
 $t-white:rgba(200,200,200,.5);
 $font:'Yanone Kaffeesatz', sans-serif;
 $slim-font:'Josefin Sans', sans-serif;
-@mixin flexer($direction,$justify,$align,$display:flex,$wrap:no-wrap){
+@mixin flexer($direction,$justify,$align,$display:flex,$wrap:nowrap){
   display:$display;
   flex-direction:$direction;
   justify-content:$justify;
