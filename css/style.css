@@ -774,6 +774,9 @@ margin-top:5%;
     width: 85%;
     margin-bottom: 5%;
   }
+	.ss-image img{
+		margin-left:5%;
+	}
 
   .section-heading {
     margin: 5% 0 5% 5%;
