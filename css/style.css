@@ -287,6 +287,10 @@ body {
 .section-heading {
   margin-left: 5%;
 }
+.section-heading:last-child{
+	margin-top:10%;
+	margin-bottom:5%;
+}
 .section-heading p {
   width: 90%;
   font-size: 1.4em;
