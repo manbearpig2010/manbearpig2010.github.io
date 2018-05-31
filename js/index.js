@@ -131,7 +131,7 @@ window.addEventListener('scroll',function(){
   if(y_pos > (headingOne - 450)){
     section_heading[0].classList.add('fly-in');
   }
- 
+ if(window.innerHeight >= 1200){
   if(y_pos > (secondSection)){
     checkOne.classList.add('fly-in');
   }
@@ -141,6 +141,18 @@ window.addEventListener('scroll',function(){
   if(y_pos > (secondSection + 150)){
     checkThree.classList.add('fly-in');
   }
+ }
+ if(window.innerHeight < 1200){
+  if(y_pos > (secondSection-300)){
+    checkOne.classList.add('fly-in');
+  }
+  if(y_pos > (secondSection -400)){
+  checkTwo.classList.add('fly-in');
+  }
+  if(y_pos > (secondSection -500)){
+    checkThree.classList.add('fly-in');
+  }
+ }
   if(y_pos > (headingTwo - 450)){
     section_heading[1].classList.add('fly-in');
   }
