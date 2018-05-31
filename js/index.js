@@ -143,13 +143,13 @@ window.addEventListener('scroll',function(){
   }
  }
  if(window.innerWidth < 1200){
-  if(y_pos > (secondSection-300)){
+  if(y_pos > (secondSection + 900)){
     checkOne.classList.add('fly-in');
   }
-  if(y_pos > (secondSection -400)){
+  if(y_pos > (secondSection + 1000)){
   checkTwo.classList.add('fly-in');
   }
-  if(y_pos > (secondSection -500)){
+  if(y_pos > (secondSection + 1100)){
     checkThree.classList.add('fly-in');
   }
  }
