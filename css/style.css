@@ -705,7 +705,9 @@ margin-top:5%;
   .ffs-info-box-container {
     height: 750px;
   }
-
+.fa-check-circle{
+	font-size:2em;
+	}
   .ffs-info-box {
     background-size: cover;
     width: 25%;
