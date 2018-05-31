@@ -404,7 +404,7 @@ body {
   flex-wrap: no-wrap;
   width: 100%;
   background-image: url("https://goo.gl/G5Nzh5");
-  background-position: 50% 50%;
+  background-position: 50% 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 1000px;
