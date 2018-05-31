@@ -313,7 +313,7 @@ body {
 
 .fa-check-circle {
   font-size: 2em;
-  transform: translateY(-20px) translateX(-25px);
+  transform: translateY(-9px) translateX(-14px);
 }
 
 .check-box {
@@ -336,6 +336,7 @@ body {
   flex-wrap: nowrap;
   width: 100%;
   font-family: "Yanone Kaffeesatz", sans-serif;
+	margin-bottom:50px;
 }
 
 .ts-expert-box {
@@ -800,7 +801,7 @@ margin-top:5%;
 
   .fourth-section-container {
     width: 85%;
-    margin-bottom: 5%;
+    margin-bottom: 0;
     margin-left: 15%;
   }
 .fourth-section-container section-heading{
@@ -816,6 +817,8 @@ margin-top:5%;
 	width:85%;
 	margin-bottom:5%;
 	margin-left:15%;
+	margin-top:0;
+	}
 
   .last-section-container {
     width: 85%;
