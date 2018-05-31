@@ -505,13 +505,13 @@ margin-top:5%;
   background-image: url("https://image.ibb.co/cWSFVy/work3.jpg");
 }
 .ffs-info-box:nth-child(4) {
-  background-image: url("https://goo.gl/oRR39D");
+  background-image: url("https://image.ibb.co/jkFEvy/work5.jpg");
 }
 .ffs-info-box:nth-child(5) {
-  background-image: url("https://goo.gl/Shukaa");
+  background-image: url("https://image.ibb.co/jb0gay/work4.jpg");
 }
 .ffs-info-box:nth-child(6) {
-  background-image: url("https://goo.gl/mX9Kaa");
+  background-image: url("https://image.ibb.co/jwzk2d/work6.jpg");
 }
 
 .info-box-overlay {
@@ -801,6 +801,10 @@ margin-top:5%;
     margin-bottom: 5%;
     margin-left: 15%;
   }
+.ffs-info-box-container {
+	width:85%;
+	margin-bottom:5%;
+	margin-left:15%;
 
   .last-section-container {
     width: 85%;
