@@ -301,6 +301,9 @@ body {
   border-top: 3px solid #FFC300;
   margin-top: -20px;
 }
+.top-part{
+	margin-bottom:300px;
+}
 
 .bottom-part {
   width: 90%;
