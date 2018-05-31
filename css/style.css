@@ -321,7 +321,7 @@ body {
   width: 85%;
 }
 .check-box p {
-  transform: translate(0, -40px);
+  transform: translate(0, -37px);
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.4em;
   width: 60px;
@@ -768,6 +768,7 @@ margin-top:5%;
 	}
 .second-section-container .section-heading{
 	margin-top:0;
+	height:700px;
 	}
   .section-heading {
     margin: 5% 0 5% 5%;
