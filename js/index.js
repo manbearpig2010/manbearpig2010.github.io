@@ -5,7 +5,7 @@ const menuLine = document.getElementsByClassName('line');
 menuContainer.addEventListener('click',rotateForward);
 
 function rotateForward(){
- menu.classlist.toggle('slide');
+ menu.classList.toggle('slide');
   this.childNodes[5].classList.toggle('rotate');
   this.childNodes[3].classList.toggle('noDisplay');
   this.childNodes[1].classList.toggle('rotateTwo');
@@ -69,7 +69,7 @@ var headingTwo = section_heading[1].offsetTop;
 var headingThree = section_heading[2].offsetTop;
 
 var checkHeightOne = document.querySelector('.check-box').offsetTop;
-
+var secondSection = document.querySelector('.second-section-container').offsetTop;
 const checkOne = checkbox[0];
 const checkTwo = checkbox[1];
 const checkThree = checkbox[2];
@@ -132,13 +132,13 @@ window.addEventListener('scroll',function(){
     section_heading[0].classList.add('fly-in');
   }
  
-  if(y_pos > (1365)){
+  if(y_pos > (secondSection)){
     checkOne.classList.add('fly-in');
   }
-  if(y_pos > (1465)){
+  if(y_pos > (secondSection + 50)){
   checkTwo.classList.add('fly-in');
   }
-  if(y_pos > (1565)){
+  if(y_pos > (secondSection + 150)){
     checkThree.classList.add('fly-in');
   }
   if(y_pos > (headingTwo - 450)){
