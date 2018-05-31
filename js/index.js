@@ -171,7 +171,7 @@ window.addEventListener('scroll',function(){
   if(y_pos > (headingThree - 500)){
     section_heading[2].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxOne) - 500){
+  if(y_pos > (picBoxContain + picBoxOne) - 450){
     pic_box[0].classList.add('fly-in');
   }
   if(y_pos > (picBoxContain + picBoxTwo) - 500){
