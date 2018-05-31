@@ -161,13 +161,13 @@ body {
   left: 0;
 }
 .slides:nth-child(5) {
-  background-image: url("http://i.imgur.com/sYYwgfG.jpg");
+  background-image: url("https://image.ibb.co/fEDnyJ/sYYwgfG.jpg");
 }
 .slides:nth-child(6) {
-  background-image: url("https://lh3.googleusercontent.com/wMwU_eHtqbyNtvUy-UCA_t3QvsiuidYYPk4dcL9AKu9-P2O-p0-HLC0Xn-jMNp8E-qT0pfHsRW9nmfquhdt96hOevn-zJdH5VaMX4uN1CDkyKvdlfxXOHzDEeeXeCzemaGGlhF_VegBqKzsH5t-4w2g_QL_iGOZEGmDrW3EdkB43qo3ET2LcpRTKUjjIO_e4Oj3z-NlXu5CUFyDlmn5PNLWDEIOb7vZww0bmT1z3UnQxzsNH21XPxISKAgPhtoyTL1jb1KNUhjFrCdF0EM_C-L6fWxThETI_NKJBPKv9T0oJ5WSmOnd-8YNeN52z0BP4S_7fK6vJtnd939UodNZh3L9OqTcVMv5HFtwDjQLsnHZOeaKkmFPUFAVxzf2xOMIPBuoX2p9NiYoOBO49zRdi72C2WPjCP-z4PBGd8tOfOaGnDVeIQF2QJ4KlIpSN2cdGc1KZ9tcJrd1sIAbCxpjxZeFBWM6v2tKbfec0902Hwk6v5trTalC15i0kJkKjhQBN_iHCLKGhuOE-mbDAX8bFovEDFfzkhtiaGqxhAT243jcRq77vr-aHIvZkfinMerrV0S4O5g0t9EBR-XH9UtiYxbP_RoLi1p3QiEKgGSA=w1229-h909-no");
+  background-image: url("https://image.ibb.co/jXoL2d/bathroom2.jpg");
 }
 .slides:nth-child(7) {
-  background-image: url("http://i.imgur.com/9DZzG7N.jpg");
+  background-image: url("https://image.ibb.co/iEgFJJ/9DZzG7N.jpg");
 }
 
 @keyframes fade-up {
@@ -402,23 +402,7 @@ body {
   width: 100%;
   height: 200px;
 }
-/*.parallax{
-  perspective: 1px;
-	height:1000px;
-	width:100%;
-	position:relative;
-	overflow-x:hidden;
-	overflow-y:auto;
-}
-.parallax_back{
-  transform:translateZ(-1px) scale(2);
-	background-image: url("https://goo.gl/G5Nzh5");
-background-position:50% 0;
-  background-attachment: fixed;
-  background-size:100% cover;
-  background-repeat: no-repeat;
-}
-*/
+
 .fourth-section-container {
   display: flex;
   flex-direction: column;
@@ -426,7 +410,7 @@ background-position:50% 0;
   align-items: center;
   flex-wrap: nowrap;
   width: 100%;
-	background-image: url("https://goo.gl/G5Nzh5");
+	background-image: url("https://image.ibb.co/heyyoJ/city.png");
 background-position:50% 0;
   background-size: cover;
   background-repeat: no-repeat;
