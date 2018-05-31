@@ -131,7 +131,7 @@ window.addEventListener('scroll',function(){
   if(y_pos > (headingOne - 450)){
     section_heading[0].classList.add('fly-in');
   }
- if(window.innerHeight >= 1200){
+ if(window.innerWidth >= 1200){
   if(y_pos > (secondSection)){
     checkOne.classList.add('fly-in');
   }
@@ -142,7 +142,7 @@ window.addEventListener('scroll',function(){
     checkThree.classList.add('fly-in');
   }
  }
- if(window.innerHeight < 1200){
+ if(window.innerWidth < 1200){
   if(y_pos > (secondSection-300)){
     checkOne.classList.add('fly-in');
   }
@@ -156,56 +156,56 @@ window.addEventListener('scroll',function(){
   if(y_pos > (headingTwo - 450)){
     section_heading[1].classList.add('fly-in');
   }
-  if(y_pos > (expert_box[0].offsetTop - 450)){
+  if(y_pos > (expert_box[0].offsetTop - 500)){
     expert_box[0].classList.add('fly-in');
   }
-  if(y_pos > (expert_box[1].offsetTop - 350)){
+  if(y_pos > (expert_box[1].offsetTop - 400)){
     expert_box[1].classList.add('fly-in');
   }
-  if(y_pos > (expert_box[2].offsetTop - 250)){
+  if(y_pos > (expert_box[2].offsetTop - 300)){
     expert_box[2].classList.add('fly-in');
   }
-  if(y_pos > (expert_box[3].offsetTop -150)){
+  if(y_pos > (expert_box[3].offsetTop -250)){
     expert_box[3].classList.add('fly-in');
   }
-  if(y_pos > (headingThree - 450)){
+  if(y_pos > (headingThree - 500)){
     section_heading[2].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxOne) - 450){
+  if(y_pos > (picBoxContain + picBoxOne) - 500){
     pic_box[0].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxTwo) - 450){
+  if(y_pos > (picBoxContain + picBoxTwo) - 500){
     pic_box[1].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxThree) - 450){
+  if(y_pos > (picBoxContain + picBoxThree) - 500){
     pic_box[2].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxFour) - 450){
+  if(y_pos > (picBoxContain + picBoxFour) - 500){
     pic_box[3].classList.add('fly-in');
   }
-  if(y_pos > (picBoxContain + picBoxFive) - 450){
+  if(y_pos > (picBoxContain + picBoxFive) - 500){
     pic_box[4].classList.add('fly-in');
   }
   
- if(y_pos > (lastOnePos - 450)){
+ if(y_pos > (lastOnePos - 500)){
     lastOne.classList.add('fly-in');
   }
-    if(y_pos > (lastTwoPos - 450)){
+    if(y_pos > (lastTwoPos - 500)){
     lastTwo.classList.add('fly-in');
   }
-    if(y_pos > (lastThreePos - 450)){
+    if(y_pos > (lastThreePos - 500)){
     lastThree.classList.add('fly-in');
   }
-    if(y_pos > (lastFourPos - 450)){
+    if(y_pos > (lastFourPos - 500)){
     lastFour.classList.add('fly-in');
   }
-    if(y_pos > (lastFivePos - 450)){
+    if(y_pos > (lastFivePos - 500)){
     lastFive.classList.add('fly-in');
   }
-    if(y_pos > (lastSixPos - 450)){
+    if(y_pos > (lastSixPos - 500)){
     lastSix.classList.add('fly-in');
   }
-  if(y_pos > (numberOnePos - 450)){
+  if(y_pos > (numberOnePos - 500)){
     if (didFireOne == false){
       getCounterOne(0,1570,1,numberOne);
     }
@@ -213,19 +213,19 @@ window.addEventListener('scroll',function(){
   }
   
   
-   if(y_pos > (numberTwoPos - 450)){
+   if(y_pos > (numberTwoPos - 500)){
     if (didFireTwo == false){
    getCounterTwo(1,5659,1,numberTwo);
     }
      didFireTwo = true;
    }
-   if(y_pos > (numberThreePos - 450)){
+   if(y_pos > (numberThreePos - 500)){
      if(didFireThree == false){
    getCounterThree(1,2681,1,numberThree);
      }
      didFireThree = true;
   }
-   if(y_pos > (numberFourPos - 450)){
+   if(y_pos > (numberFourPos - 500)){
     if (didFireFour == false){
   getCounterFour(0,357,1,numberFour)
     }
